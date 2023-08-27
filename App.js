@@ -11,27 +11,31 @@ App.get("/History", (req, res) => {
   res.send("⭐: History Route");
 });
 
-let number01 = 0,
-  number02 = 0,
-  Result = 0;
-let Question = "";
+function expressionFunction(arrayTextExpression) {
+  const operatorList = {
+    Plus: "+",
+    Minus: "-",
+    Into: "*",
+    By: "/",
+  };
+  return arrayTextExpression
+    .map((element) => operatorList[element] || element)
+    .join("");
+}
 
-App.get("/:operand01/Plus/:operand02", (req, res) => {
-  number01 = parseInt(req.params.operand01);
-  number02 = parseInt(req.params.operand02);
+App.get("/:Expression*", (req, res) => {
+  const originalURL = req.originalUrl;
 
-  Question = `${number01}+${number02}`;
-  Result = number01 + number02;
+  const textExpression = originalURL.slice(1);
 
-  res.json({ Question: Question, Answer: Result });
-});
+  const arrayTextExpression = textExpression.split("/");
 
-App.get("/:operand01/Minus/:operand02", (req, res) => {
-  number01 = parseInt(req.params.operand01);
-  number02 = parseInt(req.params.operand02);
+  const actualExpression = expressionFunction(arrayTextExpression);
 
-  Question = `${number01}-${number02}`;
-  Result = number01 - number02;
+  Result = eval(actualExpression);
 
-  res.json({ Question: Question, Answer: Result });
+  Result = Number(Result.toFixed(2));
+  console.log(Result);
+
+  res.json({ Expression: actualExpression, Answer: Result });
 });
