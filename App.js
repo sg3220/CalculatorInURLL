@@ -80,6 +80,18 @@ App.get("/BitwiseOperations/:Expression*", (req, res) => {
 
   const Result = eval(actualExpression);
 
+  const historyObject = {
+    Expression: actualExpression,
+    Answer: Result,
+  };
+
+  if (historyArray.length > 20) {
+    historyArray.shift();
+  }
+
+  historyArray.push(historyObject);
+  saveHistory();
+
   res.json({ Expression: actualExpression, Answer: Result });
 });
 
