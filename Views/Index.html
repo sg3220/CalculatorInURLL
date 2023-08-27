@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./Style.css">
+    <link rel="icon" type="image/x-icon" href="./Logo.png">
+
+    <title>Calculator</title>
+</head>
+
+<body>
+    <header class="Header">
+        Instructions-To-Use:
+    </header>
+
+    <main class="Main">
+        <div class="outerDiv">
+            <div class="innerDiv">/</div>
+            <div class="innerDiv--02">Instruction Page</div>
+        </div>
+
+        <div class="outerDiv">
+            <div class="innerDiv">/History</div>
+            <div class="innerDiv--02">Lists The Last 20 Operations Performed On The Server</div>
+        </div>
+
+        <div class="outerDiv">
+            <div class="innerDiv">Mathematical Operators: </div>
+            <div class="innerDiv--02">Plus(+), Minus(-), Into(*), By(/)<br>Remainder(%), RaisedTo(**), (, )</div>
+        </div>
+
+        <div class="outerDiv">
+            <div class="innerDiv">Bitwise Operators: </div>
+            <div class="innerDiv--02">AND(&), OR(!), XOR(^)</div>
+        </div>
+
+        <div class="outerDiv">
+            <div class="innerDiv">Examples:</div>
+        </div>
+
+        <div class="outerDiv">
+            <div class="hoverDiv backgroundColorLightYellow fontSizeSmaller">http://127.0.0.1:3000/2/Plus/3 ==>
+                2+3 ==> 5</div>
+        </div>
+
+        <div class="outerDiv">
+            <div class="hoverDiv backgroundColorLightYellow fontSizeSmaller">http://127.0.0.1:3000/2.3/Into/3.5
+                ==> 2.3*3.5 ==> 8.05
+            </div>
+        </div>
+
+        <div class="outerDiv">
+            <div class="hoverDiv backgroundColorLightYellow fontSizeSmaller">http://127.0.0.1:3000/10/Minus/8/By/4
+                ==> 2.3*3.5 ==> 8
+            </div>
+        </div>
+
+        <div class="outerDiv">
+            <div class="hoverDiv backgroundColorLightYellow fontSizeSmaller">
+                http://127.0.0.1:3000/5.75/Into/LeftBracket/2.25/Plus/3.50/RightBracket ==> 5.75*(2.25+3.50) ==>
+                33.06
+            </div>
+        </div>
+
+        <div class="outerDiv">
+            <div class="hoverDiv backgroundColorLightYellow fontSizeSmaller">
+                http://127.0.0.1:3000/BitwiseOperations/5/XOR/1 ==>
+                5^1 ==> 4 </div>
+        </div>
+
+        <div class="outerDiv">
+            <div class="hoverDiv backgroundColorLightYellow fontSizeSmaller">
+                http://127.0.0.1:3000/BitwiseOperations/LeftBracket/5/AND/2/RightBracket/XOR/LeftBracket/5/OR/2/RightBracket
+                ==>
+                (5&2)^(5|2) ==> 7
+            </div>
+        </div>
+    </main>
+
+    <footer class="Footer">
+        &#60;/&#62; By Siddharth Ghosh
+    </footer>
+
+</body>
+
+</html>
