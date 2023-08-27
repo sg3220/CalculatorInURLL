@@ -1,15 +1,8 @@
 import express from "express";
+import fs from "fs";
 
 export const App = express();
 App.use(express.json());
-
-App.get("/", (req, res) => {
-  res.send(`⭐: App Running`);
-});
-
-App.get("/History", (req, res) => {
-  res.send("⭐: History Route");
-});
 
 function expressionFunction(arrayTextExpression) {
   const operatorList = {
@@ -25,10 +18,35 @@ function expressionFunction(arrayTextExpression) {
     LeftBracket: "(",
     RightBracket: ")",
   };
+
   return arrayTextExpression
     .map((element) => operatorList[element] || element)
     .join("");
 }
+
+function saveHistory() {
+  fs.writeFileSync("History.json", JSON.stringify(historyArray), (error) => {
+    if (error) {
+      console.error("💥: Error Writing History File");
+    }
+  });
+}
+
+let historyArray = [];
+try {
+  const Data = fs.readFileSync("History.json", "utf-8");
+  historyArray = JSON.parse(Data);
+} catch (error) {
+  console.error("💥: Error Reading History File");
+}
+
+App.get("/", (req, res) => {
+  res.send(`⭐: App Running`);
+});
+
+App.get("/History", (req, res) => {
+  res.send("⭐: History Route");
+});
 
 let Result = 0;
 
@@ -73,6 +91,20 @@ App.get("/:Expression*", (req, res) => {
 
   Result = eval(actualExpression);
   Result = Number(Result.toFixed(2));
+
+  const historyObject = {
+    Expression: actualExpression,
+    Answer: Result,
+  };
+
+  if (historyArray.length > 20) {
+    historyArray.shift();
+  }
+
+  historyArray.push(historyObject);
+  console.log(historyObject);
+  console.log(historyArray);
+  saveHistory();
 
   res.json({ Expression: actualExpression, Answer: Result });
 });
