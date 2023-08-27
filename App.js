@@ -45,7 +45,7 @@ App.get("/", (req, res) => {
 });
 
 App.get("/History", (req, res) => {
-  res.send("⭐: History Route");
+  res.json(historyArray);
 });
 
 let Result = 0;

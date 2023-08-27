@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "Dev": "Nodemon Server.js"
+    "Dev": "Nodemon Server.js",
+    "Start": "Node Server.js"
   },
   "author": "Siddharth Ghosh",
   "license": "ISC",
