@@ -53,11 +53,15 @@ try {
 }
 
 App.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "Views", "Index.html"));
+  // res.sendFile(path.join(__dirname, "Views", "Index.html"));
+  res.send(`<div onMouseOver = "this.style.backgroundColor='#111111'" onMouseOut = "this.style.backgroundColor='#ffffff'" style = "display: inline; margin: 5px; padding: 5px; border-radius: 10px; background-color: #ffffff; border-color: #f7d100; border-style: solid; border-size: 5px;">
+  <a target= "_blank" style="text-decoration: none; color:#f7d100; font-family: 'Poppins', sans-serif;" href="https://github.com/sg3220/CalculatorInURLL/tree/master#api-">Read Documentation To Know How To Use🙂
+  </div>`);
 });
 
 App.get("/History", (req, res) => {
-  res.render("History", { historyArray });
+  // res.render("History", { historyArray });
+  res.json({ historyArray });
 });
 
 App.get("/BitwiseOperations/:Expression*", (req, res) => {
