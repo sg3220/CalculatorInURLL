@@ -1,19 +1,7 @@
 # Calculator-In-URL <BR>
 Hello, Welcome To The Official Documentation Of My Calculator-In-URL. <BR>
-## Front-End
--  **Markup Language Used:** HTML <BR>
-- **Style Sheet Language Used:** CSS <BR>
-- **Preprocessor Used:** SASS <BR>
--  **Language Used:** Javascript <BR>
-- **Library Used:** ReactJS <BR>
-- **Language/Library Used:** CSS(SASS)/JavaScript/ReactJS <BR> 
-- [Click To Visit](https://socket-sg3220.vercel.app/Home) <BR>
-
 ## Back-End <BR>
-- **Runtime Environment Used:** NodeJS <BR>
-- **Framework Used:** ExpressJS <BR>
 -  **Language/Environment/Library/Framework Used:** Javascript, NodeJS, ExpressJS <BR>
-- **Database Used:** MongoDB(NoSQL) <BR>
 - [Click To Visit](https://calculator-in-url.onrender.com) <BR>
 
 ## API <BR>
@@ -29,9 +17,6 @@ Hello, Welcome To The Official Documentation Of My Calculator-In-URL. <BR>
 > **# Bitwise Operations Route:**
 >**GET:** `/BitwiseOperations` 
 
-
-
-
 > **# Supported Mathematical Operators:** 
 >- Plus(+)
 >- Minus(-)
@@ -44,7 +29,6 @@ Hello, Welcome To The Official Documentation Of My Calculator-In-URL. <BR>
 >- AND(&)
 >- OR(/)
 >- XOR(^)
-
 
 > **# Examples To Understand Working:** 
 >>**GET:** `/2/Plus/3`
