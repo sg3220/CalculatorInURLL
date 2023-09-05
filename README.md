@@ -36,7 +36,7 @@ Hello, Welcome To The Official Documentation Of My Calculator-In-URL. <BR>
 >`{` <BR>
 	`"Expression":"2+3",` <BR>
 	`"Answer":"5",` <BR>
-`}` <BR>
+`}`
 
 >>**GET:** `/2.3/Into/3.5` <BR>
 >JSON Received: <BR>
