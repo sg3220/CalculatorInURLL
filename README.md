@@ -31,12 +31,12 @@ Hello, Welcome To The Official Documentation Of My Calculator-In-URL. <BR>
 >- XOR(^)
 
 > **# Examples To Understand Working:** <BR>
->>**GET:** `/2/Plus/3` v
+>>**GET:** `/2/Plus/3` <BR>
 >JSON Received: <BR>
 >`{` <BR>
 	`"Expression":"2+3",` <BR>
 	`"Answer":"5",` <BR>
-`}` <BR> <BR>
+`}` <BR>
 
 >>**GET:** `/2.3/Into/3.5` <BR>
 >JSON Received: <BR>
